@@ -1,4 +1,4 @@
-package com.chapter7.collecton;
+package com.chapter7.addCollection;
 
 import java.util.ArrayList;
 import java.util.Collection;
