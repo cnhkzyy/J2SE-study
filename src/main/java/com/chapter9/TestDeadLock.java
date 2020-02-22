@@ -4,7 +4,7 @@ package com.chapter9;
  * Author beck
  * Date 2020/2/22 18:46
  **/
-public class TestDeadLock implements Runnable{    //死锁，解决死锁的办法是把锁的粒度加粗，只锁定当前对象，不用锁住里面两个小对象
+public class TestDeadLock implements Runnable{    //死锁，解决死锁的办法是把锁的粒度加粗，只锁定当前一个对象，不用锁住里面两个小对象
     public int flag = 1;
     static Object o1 = new Object(), o2 = new Object();
     public void run() {
