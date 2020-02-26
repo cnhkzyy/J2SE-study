@@ -1,5 +1,7 @@
 package com.chapter10;
 
+import java.io.ByteArrayInputStream;
+import java.io.DataInputStream;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 
@@ -15,7 +17,10 @@ public class TestUDPServer {
         DatagramSocket ds = new DatagramSocket(5678);  //数据包，这是udp的5678端口，和tcp的5678端口不同
         while (true) {
             ds.receive(dp);
-            System.out.println(Long.parseLong(new String(buf, 0, dp.getLength())));  //dp.getLength()是包袱里收了多少个字节。这里调用了String的构造方法
+            //将字符串转为long类型并打印
+            ByteArrayInputStream bais = new ByteArrayInputStream(buf);
+            DataInputStream dis = new DataInputStream(bais);
+            System.out.println(dis.readLong());  //dp.getLength()是包袱里收了多少个字节。这里调用了String的构造方法
         }
     };
 }
