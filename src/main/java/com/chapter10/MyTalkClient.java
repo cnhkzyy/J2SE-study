@@ -20,14 +20,20 @@ public class MyTalkClient {
             DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
             //读取服务端内容
             DataInputStream dis = new DataInputStream(socket.getInputStream());
-            String readLine = ins.readLine();
+            String keyBoardLine = ins.readLine();
+            String serverLine = null;    //这里如果使用String serverLine = dis.readUTF()，如果服务端没有输入内容，会一直卡在这，所以先用null占着
 
-            while (!readLine.equals(null)) {
-                //将键盘输入作为服务端输出内容
-                dos.writeUTF(readLine);
+
+            //将键盘输入作为服务端输出内容
+            dos.writeUTF(keyBoardLine);
+
+            while ((serverLine = dis.readUTF()) != "bye") {
                 //打印服务端内容
-                System.out.println("Server: " + dis.readUTF());
+                System.out.println("服务器: " + serverLine);
+                keyBoardLine = ins.readLine();
+                dos.writeUTF(keyBoardLine);
             }
+
             ins.close();
             dos.close();
             socket.close();
