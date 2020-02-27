@@ -84,6 +84,29 @@ setResizable(boolean b)
 
 
 
+#### Panel
+1.Panel对象可以看成可以容纳Component的空间
+
+2.Panel对象可以拥有自己的布局管理器
+
+3.Panel类拥有从其父类继承来的
+```java
+setBounds(int x, int y, int width, int height)
+setSize(int width, int height)
+setLocation(int x, int y)
+setBackground(Color c)
+setLayout(LayoutManager mgr) 等方法
+```
+
+4.Panel的构造方法为
+```java
+Panel()   使用默认的FlowLayout类布局管理器初始化
+Panel(LayoutManager layout)   使用指定的布局管理器初始化
+```
+
+
+
+
 
 
 
