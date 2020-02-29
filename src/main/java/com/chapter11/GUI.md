@@ -167,6 +167,16 @@ BorderLayout型布局容器尺寸缩放原则：
 ![](.GUI_images/19f10c81.png)
 
 
+#### 布局管理器总结
+1.Frame是一个顶级窗口，Frame的缺省布局管理器为BoardLayout
+
+2.Panel无法单独显示，必须添加到某个容器中
++ Panel的缺省布局管理器为FlowLayout
+
+3.当把Panel作为一个组件添加到某个容器中后，该Panel仍然可以有自己的布局管理器
+4.使用布局管理器时，布局管理器负责各个组件的大小和位置，因此用户无法在这种情况下设置组件的大小和位置属性，如果试图使用Java语言提供的setLocation(), setSize(), setBounds()
+
+
 
 
 
