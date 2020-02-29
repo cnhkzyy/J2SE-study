@@ -105,6 +105,67 @@ Panel(LayoutManager layout)   使用指定的布局管理器初始化
 ```
 
 
+#### 布局管理器
+1.Java语言中，提供了布局管理器类的对象可以管理
++ 管理Component在Container中的布局，不必直接设置Component位置和大小
++ 每个Container都有一个布局管理器对象，当容器需要对某个组件进行定位或判断其大小尺寸时，就会调用其对应的布局管理器，调用Container的setLayout方法改变其布局管理器对象
+
+2.Awt提供了5种布局管理器类：
++ FlowLayout
++ BorderLayout
++ GridLayout
++ CardLayout
++ GridBagLayout
+
+
+#### FlowLayout布局管理器
+1.FlowLayout是Panel类的默认布局管理器
++ FlowLayout布局管理器对组件追行定位，行内从左到右，一行排满后换行
++ 不改变组件的大小，按组件原有尺寸显示组件，可设置不同的组件间距，行距以及对其方式
+
+2.FlowLayout布局管理器默认的对齐方式是居中
+![](.GUI_images/d69d7da9.png)
+
+
+#### FlowLayout的构造方法
+```java
+//右对齐，组件之间水平间隔20个像素，垂直间隔40个像素
+new FlowLayout(FlowLayout.RIGHT, 20, 40)
+
+//左对齐，水平和垂直间隔距为缺省值（5）
+new FlowLayout(FlowLayout.LEFT)
+
+//使用缺省的居中对齐方式，水平和垂直间距为缺省值（5）
+new FlowLayout();
+```
+
+
+#### BoradLayout布局管理器
+1.BorderLayout是Frame类的默认布局管理器
+2.BorderLayout将整个容器的布局划分成
++ 东(EAST)
++ 西(WEST)
++ 南(SOUTH)
++ 北(NORTH)
++ 中(CENTER)五个区域，组件只能被添加到指定的区域
+
+3.如不指定组件的加入部位，则默认加入到CENTER区
+4.每个区域只能加入一个组件，如加入多个，则先前加入的会被覆盖
+
+
+#### BorderLayout布局管理器
+BorderLayout型布局容器尺寸缩放原则：
++ 北、南两个区域在水平方向缩放
++ 东、西两个区域在垂直方向缩放
++ 中部可在两个方向上缩放
+
+![](.GUI_images/80ee2f39.png)
+
+#### GridLayout布局管理器
+1.GridLayout型布局管理器将空间划分为成规则的矩形网络，每个单元格区域大小相等。组件被添加到每个单元格中，先从左到右添满一行后换行，再从上到下
+2.在GridLayout构造方法中指定分隔的行数和列数
+![](.GUI_images/19f10c81.png)
+
 
 
 
