@@ -253,6 +253,8 @@ fillRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight)
 5.repaint —— update() —— paint();
 
 
+#### Window事件
+
 
 
 
