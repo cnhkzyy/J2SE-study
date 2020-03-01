@@ -6,30 +6,31 @@ import java.awt.event.ActionListener;
 
 /**
  * Author beck
- * Date 2020/3/1 10:27
+ * Date 2020/3/1 11:23
  **/
-public class TestTFActionEvent {
+public class TFPassword {
     public static void main(String[] args) {
-        new Frame();
+        new TFFrame2();
     };
 }
 
-class TFFrame extends Frame {
-    TFFrame () {
+
+class TFFrame2 extends Frame {
+    TFFrame2() {
         TextField tf = new TextField();
         add(tf);
-        tf.addActionListener(new TFActionListener());
+        tf.addActionListener(new TFActionListener2());
+        tf.setEchoChar('*');   //设置回显字符
         pack();
         setVisible(true);
     }
 }
 
 
-class TFActionListener implements ActionListener {
+
+class TFActionListener2 implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         TextField tf = (TextField) e.getSource();
         System.out.println(tf.getText());
-        tf.setText("");
-
     }
 }

@@ -187,6 +187,39 @@ setLayout(null);
 ![](.GUI_images/d1ce0d39.png)
 
 
+#### TestField类
+1.java.awt.TextField类用来创建文本框对象
+2.TextField有如下常用方法
+```java
+TextField()
+TextField(int columns)
+TextField(String text)
+TextField(String text, int columns)
+
+
+public void setText(String t)
+public String getText()
+public void setEchoChar(charc)    设置回显字符
+public void setEditable(boolean b)
+public boolean isEditable() 
+public void setBackground(Color c)
+public void select(int selectionStart, int selectionEnd)
+public void selectAll()
+public void addActionListener(Actionlistener I)   添加动作监听器
+```
+
+
+#### TextField事件监听
+1.TextField对象可能发生Action(光标在文本框内敲回车)事件。与该事件对应的事件类是java.awt.event.ActionEvent
+2.用来处理ActionEvent事件是实现了java.awt.event.ActionListener接口的类的对象。ActionListener接口定义有方法：
+```java
+public void actionPerformed(ActionEvent e)
+```
+3.实现该接口的类要在该方法中添加处理该事件(Action)的语句
+4.使用addActionListener(ActionEvent I)方法为TextField对象注册一个ActionListener对象，当TextField对象发生Action事件时，会生成一个ActionEvent对象，该对象作为参数传递给ActionListener对象的actionPerformer方法在方法中可以获取该对象的信息，并做相应的处理
+
+
+
 
 
 
