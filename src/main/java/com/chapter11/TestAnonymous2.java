@@ -33,7 +33,7 @@ public class TestAnonymous2 {
                 System.exit(0);
             }
         });
-        
+
 
         f.pack();
         f.setVisible(true);
