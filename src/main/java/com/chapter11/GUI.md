@@ -236,6 +236,21 @@ drawRect(int x, int y, int width, int height)
 fillRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight)
 ```
 
+#### Graphics类Paint方法
+1.每个Component都有一个paint(Graphics g)用于实现绘图目的，每次重画该Component时都会自动调用paint方法
+2.Graphics类中提供了许多绘图方法，具体请查询API文档
+
+
+#### 鼠标事件适配器
+1.抽象类java.awt.event.MouseAdapter实现了MouseListener接口，可以使用其子类作为MouseEvent的监听器，只要重写其相应的方法即可
+
+2.对于其他的监听器，也有对应的适配器
+
+3.使用适配器可以避免监听器类定义没有必要的空方法
+
+4.GUI/MyMouseAdapter.java  鼠标适配器
+
+5.repaint —— update() —— paint();
 
 
 
