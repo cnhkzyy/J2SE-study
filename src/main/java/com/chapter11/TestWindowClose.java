@@ -26,7 +26,7 @@ class MyFrame55 extends Frame {
 
 
         this.addWindowListener(
-                new WindowAdapter() {    //匿名类
+                new WindowAdapter() {    //匿名类：方法简单、语句少、很少变动，可以使用匿名类
                     public void windowClosing(WindowEvent e) {
                     setVisible(false);
                     System.exit(-1);

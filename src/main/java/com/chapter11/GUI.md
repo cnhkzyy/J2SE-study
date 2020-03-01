@@ -254,7 +254,20 @@ fillRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight)
 
 
 #### Window事件
+1.Window事件所对应的事件类是WindowEvent，所对应的事件监听端口为WindowListener
 
+2.WindowListener定义的方法有：
+```java
+public void windowOpened(WindowEvent e)
+public void windowClosing(WindowEvent e)
+public void windowClosed(WindowEvent e)
+public void windowIconified(WindowEvent e)
+public void windowDeiconified(WindowEvent e)
+public void windowActivated(WindowEvent e)
+public void windowDeactivated(WindowEvent e)
+```
+
+3.与WindowListener对应的适配器为WindowAdapter
 
 
 
