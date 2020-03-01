@@ -219,6 +219,14 @@ public void actionPerformed(ActionEvent e)
 4.使用addActionListener(ActionEvent I)方法为TextField对象注册一个ActionListener对象，当TextField对象发生Action事件时，会生成一个ActionEvent对象，该对象作为参数传递给ActionListener对象的actionPerformer方法在方法中可以获取该对象的信息，并做相应的处理
 
 
+#### 内部类
+1.好处：
++ 可以方便的访问包装类的成员
++ 可以更清楚的组织逻辑，防止不应该被其他类访问的类进行访问
+
+2.何时使用
++ 该类不允许或不需要其他类进行访问时
+
 
 
 
