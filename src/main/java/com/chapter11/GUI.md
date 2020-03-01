@@ -228,6 +228,15 @@ public void actionPerformed(ActionEvent e)
 + 该类不允许或不需要其他类进行访问时
 
 
+#### Graphics类
+1.每个Component都有一个paint(Graphics g)用于实现绘图目的，每次重画该Component时都自动调用paint方法
+2.Graphics类中提供了许多绘图方法，如
+```java
+drawRect(int x, int y, int width, int height)
+fillRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight)
+```
+
+
 
 
 
